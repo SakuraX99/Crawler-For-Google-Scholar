@@ -1,0 +1,59 @@
+INFO:scholarly:Getting https://scholar.google.com/scholar?hl=en&q=Generating%20High%20fidelity%20Images%20with%20subscale%20pixel%20Networks%20and%20Multidimensional%20Upscaling&as_vis=0&as_sdt=0,33
+WARNING:fake_useragent:Error occurred during loading data. Trying to use cache server https://fake-useragent.herokuapp.com/browsers/0.1.11
+Traceback (most recent call last):
+  File "C:\Users\ZTY\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1317, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "C:\Users\ZTY\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\ZTY\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\ZTY\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\ZTY\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\ZTY\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 966, in send
+    self.connect()
+  File "C:\Users\ZTY\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1414, in connect
+    super().connect()
+  File "C:\Users\ZTY\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 938, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "C:\Users\ZTY\AppData\Local\Programs\Python\Python37\lib\socket.py", line 727, in create_connection
+    raise err
+  File "C:\Users\ZTY\AppData\Local\Programs\Python\Python37\lib\socket.py", line 716, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ZTY\AppData\Local\Programs\Python\Python37\lib\site-packages\fake_useragent\utils.py", line 67, in get
+    context=context,
+  File "C:\Users\ZTY\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\ZTY\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\ZTY\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\ZTY\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\ZTY\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1360, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "C:\Users\ZTY\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1319, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error timed out>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ZTY\AppData\Local\Programs\Python\Python37\lib\site-packages\fake_useragent\utils.py", line 154, in load
+    for item in get_browsers(verify_ssl=verify_ssl):
+  File "C:\Users\ZTY\AppData\Local\Programs\Python\Python37\lib\site-packages\fake_useragent\utils.py", line 97, in get_browsers
+    html = get(settings.BROWSERS_STATS_PAGE, verify_ssl=verify_ssl)
+  File "C:\Users\ZTY\AppData\Local\Programs\Python\Python37\lib\site-packages\fake_useragent\utils.py", line 84, in get
+    raise FakeUserAgentError('Maximum amount of retries reached')
+fake_useragent.errors.FakeUserAgentError: Maximum amount of retries reached
+INFO:scholarly:Exception HTTPSConnectionPool(host='scholar.google.com', port=443): Max retries exceeded with url: /scholar?hl=en&q=Generating%20High%20fidelity%20Images%20with%20subscale%20pixel%20Networks%20and%20Multidimensional%20Upscaling&as_vis=0&as_sdt=0,33 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001D4C47C6248>, 'Connection to scholar.google.com timed out. (connect timeout=10)')) while fetching page. Retrying.
+INFO:scholarly:Exception HTTPSConnectionPool(host='scholar.google.com', port=443): Max retries exceeded with url: /scholar?hl=en&q=Generating%20High%20fidelity%20Images%20with%20subscale%20pixel%20Networks%20and%20Multidimensional%20Upscaling&as_vis=0&as_sdt=0,33 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001D4C47D0988>, 'Connection to scholar.google.com timed out. (connect timeout=10)')) while fetching page. Retrying.
+INFO:scholarly:Exception HTTPSConnectionPool(host='scholar.google.com', port=443): Max retries exceeded with url: /scholar?hl=en&q=Generating%20High%20fidelity%20Images%20with%20subscale%20pixel%20Networks%20and%20Multidimensional%20Upscaling&as_vis=0&as_sdt=0,33 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001D4C479CEC8>, 'Connection to scholar.google.com timed out. (connect timeout=10)')) while fetching page. Retrying.
+INFO:scholarly:Exception HTTPSConnectionPool(host='scholar.google.com', port=443): Max retries exceeded with url: /scholar?hl=en&q=Generating%20High%20fidelity%20Images%20with%20subscale%20pixel%20Networks%20and%20Multidimensional%20Upscaling&as_vis=0&as_sdt=0,33 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001D4C4630A88>, 'Connection to scholar.google.com timed out. (connect timeout=10)')) while fetching page. Retrying.
+INFO:scholarly:Exception HTTPSConnectionPool(host='scholar.google.com', port=443): Max retries exceeded with url: /scholar?hl=en&q=Generating%20High%20fidelity%20Images%20with%20subscale%20pixel%20Networks%20and%20Multidimensional%20Upscaling&as_vis=0&as_sdt=0,33 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001D4C479C508>, 'Connection to scholar.google.com timed out. (connect timeout=10)')) while fetching page. Retrying.
