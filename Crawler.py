@@ -5,7 +5,7 @@ from fp.fp import FreeProxy
 
 def set_new_proxy():
     while True:
-        proxy = FreeProxy(country_id=['US', 'BR'], timeout=1, rand=True).get()
+        proxy = FreeProxy(timeout=1, rand=True).get()
         proxy_works = scholarly.use_proxy(http=proxy, https=proxy)
         if proxy_works:
             break
