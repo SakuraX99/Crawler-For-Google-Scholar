@@ -36,9 +36,9 @@ def get_articleInfo(title):
 source_data = open("iclr_year_conf_title_author_url_biburl_final_2017-2019.txt")
 line = source_data.readline()
 while line:
-    time_tup = time.localtime(time.time())
+    nowTime = time.strftime("%Y-%m-%d %H:%M:%S")
     print("-------------------------------------------------")
-    print(time_tup)
+    print(nowTime)
     line = source_data.readline()
     data_array = line.split(" ##### ")
     print(get_articleInfo(data_array[2]))
