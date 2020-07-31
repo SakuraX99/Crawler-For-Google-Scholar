@@ -4,7 +4,7 @@ from scholarly import scholarly
 
 def set_new_proxy():
     while True:
-        proxy = FreeProxy(rand=True, timeout=1).get()
+        proxy = FreeProxy().get()
         proxy_works = scholarly.use_proxy(http=proxy, https=proxy)
         if proxy_works:
             break
