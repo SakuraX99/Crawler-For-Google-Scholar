@@ -6,10 +6,10 @@ import json
 def set_new_proxy():
     while True:
         proxy = FreeProxy().get()
-        proxy_works = scholarly.use_proxy(http=proxy, https=proxy)
+        proxy_works = scholarly.use_proxy(http="http://122.102.27.21:23500", https="http://122.102.27.21:23500")
         if proxy_works:
             break
-    print("Working proxy:", proxy)
+    print("Working proxy:", "http://122.102.27.21:23500")
     return proxy
 
 
