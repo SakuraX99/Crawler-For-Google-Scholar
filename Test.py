@@ -27,7 +27,7 @@ while True:
 pub = next(search_query)
 print(pub)
 
-json = json.dumps(pub)
+json = str(pub)
 print("--------------------------")
 print(json)
 print("==========================")
