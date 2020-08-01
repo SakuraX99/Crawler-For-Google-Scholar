@@ -1,5 +1,6 @@
 from fp.fp import FreeProxy
 from scholarly import scholarly
+import json
 
 
 def set_new_proxy():
@@ -26,13 +27,8 @@ while True:
 pub = next(search_query)
 print(pub)
 
-while True:
-    try:
-        filled = pub.fill()
-        print("Filled the publication")
-        break
-    except Exception as e:
-        print("Trying new proxy")
-        set_new_proxy()
-
-print(filled)
+json = json.dumps(pub)
+print("--------------------------")
+print(json)
+print("==========================")
+print(type(json))
