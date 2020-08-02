@@ -6,10 +6,10 @@ import json
 def set_new_proxy():
     while True:
         proxy = FreeProxy().get()
-        proxy_works = scholarly.use_proxy(http=proxy, https=proxy)
+        proxy_works = scholarly.use_proxy(http="http://103.197.46.131:8080", https="http://103.197.46.131:8080")
         if proxy_works:
             break
-    print("Working proxy:", proxy)
+    print("Working proxy:", "http://103.197.46.131:8080")
     return proxy
 
 
@@ -32,3 +32,8 @@ print("--------------------------")
 print(json)
 print("==========================")
 print(type(json))
+print("==========================")
+json1 = json.loads(json)
+print(json1)
+print(type(json1))
+print(json1["cites"])
