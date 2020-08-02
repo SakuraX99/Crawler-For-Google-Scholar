@@ -45,7 +45,7 @@ while line:
     print(ret)
 
     json_str = str(ret)
-    json = eval(str)
+    json = eval(json_str)
     print(type(json))
     print(json["bib"]["cites"])
     data["Title"].append(json["bib"]["title"])
