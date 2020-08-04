@@ -12,10 +12,10 @@ data = {"Title":[],
 def set_new_proxy():
     while True:
         proxy = FreeProxy(timeout=1, rand=True).get()
-        proxy_works = scholarly.use_proxy(http="123.179.163.100:53954", https="123.179.163.100:53954")
+        proxy_works = scholarly.use_proxy(http="http://123.179.163.100:53954", https="http://123.179.163.100:53954")
         if proxy_works:
             break
-    print("Working proxy:", "123.179.163.100:53954")
+    print("Working proxy:", "http://123.179.163.100:53954")
     return proxy
 
 def get_articleInfo(title):
