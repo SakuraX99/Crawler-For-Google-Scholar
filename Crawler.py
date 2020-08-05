@@ -57,11 +57,16 @@ while line:
         data["Title"].append(json["bib"]["title"])
         data["cites"].append(json["bib"]["cites"])
         data["year"].append(json["bib"]["year"])
+        df = pd.DataFrame(data, columns=["Title", "cites", "year"])
+        df.to_csv("./cites.csv", index=False, columns=["Title", "cites", "year"])
     except Exception as e:
-        logging.debug(idx + "fetch error")
+        logging.debug("fetch error:")
+        logging.debug(idx)
         data["Title"].append("NaN")
         data["cites"].append("NaN")
         data["year"].append("NaN")
+        df = pd.DataFrame(data, columns=["Title", "cites", "year"])
+        df.to_csv("./cites.csv", index=False, columns=["Title", "cites", "year"])
 
 
 source_data.close()
