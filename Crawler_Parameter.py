@@ -32,7 +32,12 @@ def get_articleInfo(title):
 
 if __name__ == '__main__':
 
-    logging.basicConfig(filename=os.path.join(os.getcwd(), 'log.txt'), level=logging.DEBUG)
+    start = eval(sys.argv[1])
+    capacity = eval(sys.argv[2])
+    tag = "./cites_" + str(start) + "_to_" + str(start + capacity) + ".csv"
+    log_tag = str(start) + "_to_" + str(start + capacity) + "_log.txt"
+
+    logging.basicConfig(filename=os.path.join(os.getcwd(), log_tag), level=logging.DEBUG)
 
     # 存储读取的数据对象
     data = {"Title": [],
@@ -48,9 +53,7 @@ if __name__ == '__main__':
         reader = csv.reader(f)
 
         idx = 0
-        start = eval(sys.argv[1])
-        capacity = eval(sys.argv[2])
-        tag = "./cites_" + str(start) + "_to_" + str(start+capacity) + ".csv"
+
 
         for row in reader:
 
