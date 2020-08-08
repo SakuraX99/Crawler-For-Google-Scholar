@@ -48,8 +48,8 @@ if __name__ == '__main__':
         reader = csv.reader(f)
 
         idx = 0
-        start = sys.argv[1]
-        capacity = sys.argv[2]
+        start = eval(sys.argv[1])
+        capacity = eval(sys.argv[2])
         tag = "./cites_" + str(start) + "_to_" + str(start+capacity) + ".csv"
 
         for row in reader:
