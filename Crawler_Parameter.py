@@ -73,8 +73,8 @@ if __name__ == '__main__':
                     data["cites"].append(json["bib"]["cites"])
                     data["year"].append(json["bib"]["year"])
                     data["abstract"].append(json["bib"]["abstract"])
-                    df = pd.DataFrame(data, columns=["Title", "cites", "year"])
-                    df.to_csv(tag, index=False, columns=["Title", "cites", "year"])
+                    df = pd.DataFrame(data, columns=["Title", "cites", "year","abstract"])
+                    df.to_csv(tag, index=False, columns=["Title", "cites", "year","abstract"])
                 except Exception as e:
                     logging.debug("fetch error:")
                     logging.debug(row[5])
@@ -82,6 +82,6 @@ if __name__ == '__main__':
                     data["cites"].append("NaN")
                     data["year"].append(row[1])
                     data["abstract"].append("NaN")
-                    df = pd.DataFrame(data, columns=["Title", "cites", "year"])
-                    df.to_csv(tag, index=False, columns=["Title", "cites", "year"])
+                    df = pd.DataFrame(data, columns=["Title", "cites", "year","abstract"])
+                    df.to_csv(tag, index=False, columns=["Title", "cites", "year","abstract"])
 
