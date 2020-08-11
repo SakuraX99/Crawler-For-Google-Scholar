@@ -34,8 +34,8 @@ if __name__ == '__main__':
 
     start = eval(sys.argv[1])
     capacity = eval(sys.argv[2])
-    tag = "./cites_" + str(start) + "_to_" + str(start + capacity) + ".csv"
-    log_tag = str(start) + "_to_" + str(start + capacity) + "_log.txt"
+    tag = "cites/cites_" + str(start) + "_to_" + str(start + capacity) + ".csv"
+    log_tag = "log/" + str(start) + "_to_" + str(start + capacity) + "_log.txt"
 
     logging.basicConfig(filename=os.path.join(os.getcwd(), log_tag), level=logging.DEBUG)
 
