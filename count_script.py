@@ -22,7 +22,7 @@ for i in range(12):
             reader = csv.reader(f)
             for row in reader:
                 portion_count+=1
-                if row[2]!="NaN":
+                if row[1]!="NaN":
                     portion_valid_count+=1
     except:
         continue
