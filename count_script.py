@@ -1,5 +1,5 @@
 import csv
-from datetime import time
+import time
 
 count = 0
 valid_count = 0
